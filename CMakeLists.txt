@@ -10,5 +10,9 @@ target_sources(imgui PRIVATE
 	imgui_widgets.cpp
 	imgui_demo.cpp
 	imgui_tables.cpp
+    backends/imgui_impl_glfw.cpp
+    backends/imgui_impl_opengl3.cpp
 	misc/cpp/imgui_stdlib.cpp
 )
+
+target_link_libraries(imgui PUBLIC glfw)
